@@ -1,0 +1,23 @@
+<div ng-controller="FriendController">
+
+<div class="container">
+search for friend
+<p><input type="text" ng-model="sear_text"/></p>
+    <table class="table table-striped">
+        <thead>
+         <tr>
+         <th>Firstname</th><th>Lastname</th><th>Role</th></tr>
+        </thead>
+       <tbody>
+        <tr ng-repeat="user in users|filter:sear_text">
+        <td>{{user.firstname}}</td>
+        <td>{{user.lastname}}</td>
+        <td>{{user.role}}</td>
+        <td><a href="" ng-click="sendFriendRequest(user.firstname)" class="btn btn-default">Send Friend Request</a></td>
+         
+        </tr>
+       
+       </tbody>
+    </table>
+</div>
+</div>

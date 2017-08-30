@@ -1,0 +1,39 @@
+<div  class="container" ng-controller="BlogController1">
+ <div class="form-group"></div>
+ 
+<ul>
+  <li ng-repeat='x in blogdata2'>
+  
+   <fieldset>
+    <legend></legend>
+    <p>ID:{{x.id}} &nbsp;&nbsp;&nbsp;
+      <p>title:{{x.title}}</p>
+    &nbsp;&nbsp;&nbsp;
+    
+    
+    
+  
+    <p>Description:{{x.description}}</p>&nbsp;&nbsp;&nbsp;
+     <p>User Name:{{x.createdBy}}</p>
+     <p>{{x.likes}}&nbsp;&nbsp;<input type="button" value="like" ng-click="likeinc(x)" class="btn btn-success"/></p>
+     <p>{{x.dislike}}&nbsp;&nbsp;<input type="button" value="Dislike" ng-click="dislikeinc(x)" class="btn btn-success"/></p>
+     
+     
+     
+  </fieldset>
+ 
+  
+  </li>
+</ul>
+
+
+
+ </div>
+ 
+
+
+
+</div>
+
+
+</div>

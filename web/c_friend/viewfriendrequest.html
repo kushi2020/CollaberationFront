@@ -1,0 +1,36 @@
+<div class="container" ng-controller="FriendController">
+
+	<p>
+	<p>
+	<p>
+	<p>
+	
+	<p>
+	<p>
+	<p>
+	<p>
+	
+	<div class="form-group has-feedback"></div>
+	
+  <input type="submit" ng-click="getMyFriendRequests()" class="btn btn-warning btn-sm" value="no of request"/>
+
+  search for friend
+
+
+
+
+	<div ng-repeat="x in friendrequest ">
+
+		<fieldset>
+			<legend></legend>
+
+			<p>Name: {{x}} &nbsp; &nbsp;&nbsp; 
+			<a href="#" ng-click="acceptFriendRequest(x)">Accept</a>
+			<a href="#" ng-click="rejectFriendRequest(x)">Reject</a>
+
+			
+		</fieldset>
+	</div>
+
+
+</div>

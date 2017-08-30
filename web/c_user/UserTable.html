@@ -1,0 +1,45 @@
+<div ng-controller="UserTableController">
+<form>
+<table cellspacing="2" align="center">
+ <tr bgcolor="cyan">
+  <td colspan="2"></td>
+ </tr>
+<tr bgcolor="pink"><td colspan="2"><center>User Content</center></td></tr>
+<tr bgcolor="cyan"> <td>First Name</td>
+<td><input type="text" ng-model="blog.firstname"/></td>
+</tr>
+<tr bgcolor="cyan"> <td>Last Name</td>
+<td><input type="text" ng-model="blog.lastname"/></td>
+</tr>
+<tr bgcolor="cyan"> <td>Email Id</td>
+<td><input type="text" ng-model="blog.emailid"/></td>
+</tr>
+<tr bgcolor="cyan"> <td>Role</td>
+<td><input type="text" ng-model="blog.role"/></td>
+</tr>
+<tr bgcolor="cyan"> <td>Status</td>
+<td><input type="text" ng-model="blog.status"/></td>
+</tr>
+<tr bgcolor="cyan"> <td>ISOnLine</td>
+<td><input type="text" ng-model="blog.isonline"/></td>
+</tr>
+
+
+<tr bgcolor="pink"><td colspan="2"><input type="submit" ng-click="saveBlogPost()"/></td></tr>
+</table>
+
+</form>
+
+
+
+
+<p>Looping with objects:</p>
+<ul>
+  <li ng-repeat='x in blogdata'>
+  {{x.userid+','+x.firstname+','+x.lastname}}
+  
+  </li>
+</ul>
+
+
+</div>

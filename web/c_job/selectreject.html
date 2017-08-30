@@ -1,0 +1,26 @@
+<div class="container" ng-controller="JobController">
+ <div class="form-group"></div>
+  select the candidate
+ 
+ <div ng-repeat="x in blogdata1 ">
+    <fieldset>
+    <legend></legend>
+    <p>ID:{{x.id}}</p>
+    <p>Job Id:{{x.job_id}} &nbsp;&nbsp;&nbsp;
+    <a href="#" ng-click="update(x.id)">Approved</a>
+    &nbsp;&nbsp;&nbsp;
+    <button type="button" ng-click="deletejob(x.id)"
+    class="btn btn-warning btn-sm">Not Approved</button>
+    </p>
+    <p>userId:{{x.userid}}</p>
+    
+    
+  </fieldset>
+ 
+ 
+ 
+ </div>
+
+
+
+</div>

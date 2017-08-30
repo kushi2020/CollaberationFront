@@ -1,0 +1,168 @@
+<style>
+input.ng-invalid.ng-touched{
+border:2px solid red;
+}
+</style>
+
+<body>
+	<div class="generic-container" ng-controller="UserTableController">
+
+
+				<div class="alert alert-danger fade in">
+
+				{{blog.errorMessage}}
+			</div>
+
+	
+
+
+		<div ng-show='blog.errorMessage=="" '>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<span class="lead">User Registration Form </span>
+				</div>
+				<div class="formcontainer">
+					<form ng-submit="saveBlogPost()" name="myForm"
+						class="form-horizontal">
+
+						<label>Register As..</label>
+						<div class="container">
+							<div class="radio">
+								<label class="radio-inline active" > <input type="radio"
+									name="role" value="student" ng-model="blog.role" checked="">
+									Student
+								</label> <label class="radio-inline"> <input type="radio"
+									name="role" value="admin" ng-model="blog.role">
+									Admin
+								</label> <label class="radio-inline"> <input type="radio"
+									name="role" value="employee" ng-model="blog.role">
+									Employee
+								</label>
+								
+							</div>
+
+
+						</div> 
+
+
+					<!--	<div class="row">
+							<div class="form-group col-md-12">
+								<label class="col-md-2 control-lable" for="id">ID</label>
+								<div class="col-md-7">
+									<input type="text" ng-model=".id" id="id"
+										class="userid form-control input-sm"
+										placeholder="Enter your ID" required ng-minlength="3" ng-required="true"/>
+								</div>
+							</div>
+						</div> -->
+
+
+						<div class="row">
+							<div class="form-group col-md-12">
+								<label class="col-md-2 control-lable" for="name">Name</label>
+								<div class="col-md-7">
+									<input type="text" ng-model="blog.firstname" id="name"
+										class="username form-control input-sm"
+										placeholder="Enter your name" required ng-minlength="3" required/>
+								 <span ng-show="myForm.$dirty &&myForm.name.$error.required">This is required field</span>
+									<span></span>	
+								</div>
+							</div>
+						</div>
+
+                         <div class="row">
+							<div class="form-group col-md-12">
+								<label class="col-md-2 control-lable" for="name1">Last Name</label>
+								<div class="col-md-7">
+									<input type="text" ng-model="blog.lastname" id="name1"
+										class="username form-control input-sm"
+										placeholder="Enter your name" required ng-minlength="3" required/>
+						            <span ng-show="myForm.$dirty &&myForm.name1.$error.required">This is required field</span>
+									<span></span>
+									
+								
+								</div>
+							</div>
+						</div>
+                         
+						<div class="row">
+							<div class="form-group col-md-12">
+								<label class="col-md-2 control-lable" for="possword">Password</label>
+								<div class="col-md-7">
+									<input type="password" ng-model="blog.possword"
+										id="password" class="username form-control input-sm"
+										placeholder="Enter your password" required ng-minlength="3" ng-required="true" />
+						           <span ng-show="myForm.$dirty &&myForm.possword.$error.required">This is required field</span>
+									<span></span>
+							
+								
+								</div>
+							</div>
+						</div>
+
+
+						<div class="row">
+							<div class="form-group col-md-12">
+								<label class="col-md-2 control-lable" for="email">Email</label>
+								<div class="col-md-7">
+									<input type="email" ng-model="blog.emailid" id="emailid"
+										class="email form-control input-sm"
+										placeholder="Enter your Email" ng-required="true"/>
+                                  <span ng-show="myForm.$dirty &&myForm.emailid.$error.required">This is required field</span>
+									<span></span>
+								
+								
+								</div>
+							</div>
+						</div> 
+
+						<!--<div class="row">
+							<div class="form-group col-md-12">
+								<label class="col-md-2 control-lable" for="mobilel">Mobile</label>
+								<div class="col-md-7">
+									<input type="tel" ng-model="ctrl.user.mobile" id="mobile"
+										class="mobile form-control input-sm"
+										placeholder="Enter your contact number" required />
+
+								</div>
+							</div>
+						</div>-->
+
+
+					<!--	<div class="row">
+							<div class="form-group col-md-12">
+								<label class="col-md-2 control-lable" for="address">Address</label>
+								<div class="col-md-7">
+									<input type="text" width="100" height="50"
+										ng-model="ctrl.user.address" id="address"
+										class="form-control input-sm"
+										placeholder="Enter your Address." />
+								</div>
+							</div>
+						</div>
+                                -->
+                                
+                        
+                                
+                                
+                                
+                                
+                                
+
+</br></br>
+						<div class="row">
+							<div class="form-actions floatRight">
+								<input type="submit" value="Register" ng-disabled="myForm.$invalid"
+									class="btn btn-warning btn-sm"/>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+</body>

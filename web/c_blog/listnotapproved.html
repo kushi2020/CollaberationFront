@@ -1,0 +1,23 @@
+<div class="container" ng-controller="BlogController1">
+ <div class="form-group"></div>
+  Who Are Not Approved
+ 
+ <div ng-repeat="x in blogdata1 ">
+  <fieldset>
+    <legend></legend>
+    <p>ID:{{x.id}} &nbsp;&nbsp;&nbsp;
+    <a href="#" ng-click="update(x.id)">Approved</a>
+    &nbsp;&nbsp;&nbsp;
+    <button type="button" ng-click="delete1(x.id)"
+    class="btn btn-warning btn-sm">Not Approved</button>
+    </p>
+    <p>title:{{x.title}}</p>
+    <p>Qualification:{{x.description}}</p>
+    
+  </fieldset>
+ </div>
+ 
+
+
+
+</div>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+
+<div ng-controller="UserTableController">
+
+
+		
+<div class="form-group form-group-sm">
+<div class="row">			
+<div class="col-md-4 col-md-offset-5">
+<p style="color:red;">
+			{{mess}}</p>
+	
+<label for="firstname">ID</label>
+<input type="text" id="firstname" ng-model="blog.firstname" class="form-control"/><br>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4 col-md-offset-5">
+<label for="password" >Password</label>
+<input type="password" ng-model="blog.possword" class="form-control"><br>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4 col-md-offset-5">
+
+<input type="submit" ng-click="login(blog)" value="login" class="btn btn-primary"/> 
+</div>
+</div>
+</div>
+</div>
+
+</html>

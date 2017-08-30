@@ -1,0 +1,17 @@
+<div class="container" ng-controller="JobController">
+
+	<div class="form-group">
+		ID :<label>{{selectedjob.jobid}}</label> <br> 
+		Title: <label>{{selectedjob.title}}</label>
+		Date :<label>{{selectedjob.postdate}}</label> <br> <br>
+		Description :<label>{{selectedjob.jobdesc}}</label>
+		Qualification :<label>{{selectedjob.qualification}}</label>
+		
+		<button type="button"  ng-click="applyForJob(selectedjob.jobid)" 
+			       class="btn btn-warning btn-sm">Apply for job</button>
+		
+
+
+	</div>
+
+</div>

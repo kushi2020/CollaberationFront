@@ -1,0 +1,77 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+   <div class="navbar-header">
+     <a class="navbar-brand" href="#">Collaboration</a>
+       </div>
+       <ul class="nav navbar-nav">
+       <li><a href="#/Login" ng-hide="currentUser.firstname">Login</a></li>
+      <li><a href="#/Register" ng-hide="currentUser.firstname">Register</a></li>
+     <li><a href="#/Users"></a></li>
+  
+        <li class="active"><a href="#/">Home</a></li>
+        
+        
+         
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Blog<span class="coret"></span></a>
+        <ul class="dropdown-menu">
+        <li><a href="#/Blog">Show List Of Blog</a></li>
+        <li><a href="#/bloglistNot" ng-show="currentUser.role=='admin'">Blog List Not Approved</a></li>
+                <li><a href="#/Bloglike" ng-show="currentUser.firstname">View Blog</a></li>
+        <li><a href="#/Blog1" ng-show="currentUser.firstname">Add New Blog</a></li>
+        <li class="dropdown"><a href="#/Approve" ng-show="currentUser.role=='admin'">Approve for Blog</a></li>
+         </li>
+       </ul></li>
+     
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" ng-show="currentUser.firstname">Friends<span class="coret"></span></a>
+        <ul class="dropdown-menu">
+       <!-- <li><a href="#/Friend">Show List Of Friends</a></li>-->
+        <li><a href="#/searchfriend" ng-show="currentUser.firstname">Search Friends</a></li>
+                <li><a href="#/viewfriend" ng-show="currentUser.firstname">view Friends</a></li>
+       </ul></li>
+       
+  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Jobs<span class="coret"></span></a>
+        <ul class="dropdown-menu">
+       <!-- <li><a href="#/Job_List">Show List Of Jobs</a></li>-->
+        <li><a href="#/search_job">Search Jobs</a></li>
+                <li><a href="#/showapplied" ng-show="currentUser.firstname">Show Applied</a></li>
+        <li><a href="#/select_reject" ng-show="currentUser.role=='admin'">select candidate</a></li>
+        <li><a href="#/Job" ng-show="currentUser.role=='admin'">Post new Job</a></li>
+        
+       </ul></li>
+       
+     
+   <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" ng-show="currentUser.firstname">Chat Forums<span class="coret"></span></a>
+        <ul class="dropdown-menu">
+        <li><a href="#/Forum" ng-show="currentUser.firstname">Group</a></li>
+       </ul></li>
+     <li><a href="#" ng-show="currentUser.firstname">welcome {{currentUser.firstname}} you logged in as {{currentUser.role}}</a></li>
+
+
+
+     
+    <li><a href="#" ng-click="logout()" ng-show="currentUser.firstname">logout</a></li>    
+  
+  </div>
+ 
+ 
+ </nav>
+<style>
+ 
+ 
+ .footer {
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+  
+  /* additional style for effect only */
+   text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+ </style>
+ <footer id="footer" class="footer">
+      <div class="container">
+        <p class="text-muted">My Collaboration Site</p>
+      </div>
+    </footer>
+
